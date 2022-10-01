@@ -1,12 +1,18 @@
 import 'package:get/get.dart';
+import 'package:project/app/modules/home/bindings/home_binding.dart';
+import 'package:project/app/modules/home/views/home_view.dart';
 
 class AuthController extends GetxController {
-  //TODO: Implement AuthController
-
   final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    initializeAuth();
+  }
+
+  initializeAuth() async {
+    await Future.delayed(const Duration(seconds: 2));
+    Get.offAll(() => const HomeView(), binding: HomeBinding());
   }
 
   @override

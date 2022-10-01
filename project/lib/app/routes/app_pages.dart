@@ -10,7 +10,8 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.AUTH;
+  static const home = Routes.HOME;
 
   static final routes = [
     GetPage(
@@ -20,7 +21,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.AUTH,
-      page: () => const AuthView(),
+      page: () => AuthView(),
       binding: AuthBinding(),
     ),
   ];
